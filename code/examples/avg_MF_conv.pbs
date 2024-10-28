@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -A TG-AST140041
+#SBATCH -J avg_MF_conv
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -p skx
+#SBATCH -t 24:00:00
+#SBATCH -o /scratch/07833/tg871330/tSZ_NG_ini_jobs/job_files_suite/avg_stat/output_files/avg_MF_conv.o%j
+#SBATCH --mail-user=a.sabyr@columbia.edu
+#SBATCH --mail-type=all
+
+source /home1/07833/tg871330/miniconda3/bin/activate tSZ
+python /scratch/07833/tg871330/tSZ_NG/code/suite_code/compute_avg_suite.py 20bin_1to3sigma_MF 60 MF_V0_V1_V2 20bin_1to3sigma 1 30 500,5500,500

@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -A TG-AST140041
+#SBATCH -J 30bin_3to3_goal_wiener_beam_MF_fid
+#SBATCH -N 4
+#SBATCH -n 180
+#SBATCH -p skx
+#SBATCH -t 24:00:00
+#SBATCH -o /scratch/07833/tg871330/tSZ_NG_ini_jobs/job_files_suite/30bin_3to3_goal_wiener_beam_MF/output_files/launcher_30bin_3to3_goal_wiener_beam_MF_fid.o%j
+#SBATCH --mail-user=a.sabyr@columbia.edu
+#SBATCH --mail-type=all
+export PYTHONPATH=/scratch/07833/tg871330/software_scratch/pylauncher/src/pylauncher:${PYTHONPATH}
+source /home1/07833/tg871330/miniconda3/bin/activate tSZ
+python launcher_py/30bin_3to3_goal_wiener_beam_MF_fid.py
