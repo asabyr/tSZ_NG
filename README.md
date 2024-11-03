@@ -1,6 +1,6 @@
 # tSZ_NG
 
-This directory contains the core modules used in [Sabyr, Hill, and Haiman 2024]().
+This directory contains the core modules used in [Sabyr, Hill, and Haiman 2024](https://arxiv.org/abs/2410.21247).
 
 ## Requirements
 
